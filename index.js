@@ -9,13 +9,14 @@ const connectDB = require ("./src/configs/database");
 const authRoute = require ("./src/routes/authRoute");
 const jobRoutes = require("./src/routes/jobRoute");
 const userRoutes = require("./src/routes/userRoute");
+const adminRoutes = require("./src/routes/adminRoute")
 
 connectDB();
 
 app.use ("/api", authRoute);
 app.use("/api", jobRoutes);
 app.use("/api", userRoutes);
-
+app.use("/api", adminRoutes)
 
 
 
