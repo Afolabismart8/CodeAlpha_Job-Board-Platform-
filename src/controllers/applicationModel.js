@@ -1,8 +1,6 @@
 exports.applyForJob = async (req, res) => {
 
-  try {
-
-    const { coverLetter } = req.body;
+  try { const { coverLetter } = req.body;
 
     // Check job exists
     const job = await Job.findById(req.params.id);
