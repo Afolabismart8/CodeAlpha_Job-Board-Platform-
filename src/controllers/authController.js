@@ -29,9 +29,7 @@ exports.Register = async (req,res) => {
 
 
 exports.Login = async (req, res) => {
-  try {
-
-    const { email, password } = req.body;
+  try {  const { email, password } = req.body;
 
     // Check user
     const user = await User.findOne({ email });

@@ -48,9 +48,7 @@ exports.createJob = async (req, res) => {
 
 exports.applyForJob = async (req, res) => {
 
-  try {
-
-    const { coverLetter } = req.body;
+  try { const { coverLetter } = req.body;
 
     const job = await Job.findById(req.params.id);
 
